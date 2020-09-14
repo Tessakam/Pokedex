@@ -1,31 +1,54 @@
-(() => {
+// The ID-number and name
+// An image (sprite)
+// At least 4 "moves
 
+(() => {
 
     document.getElementById("search").addEventListener("click", () => {
 
-        // Make a Pokédex using API https://pokeapi.co/
-        fetch('https://pokeapi.co/api/v2/pokemon/') // example ditto
+        let inputdata = document.getElementById("input").value;
+        console.log(inputdata)
+
+        // Make a Pokédex using API https://pokeapi.co/ and fetch
+        fetch('https://pokeapi.co/api/v2/pokemon/' + inputdata)
             .then(response => response.json())
             .then(data => showPokemon(data))
-        console.log(data)
     })
 
-    function showPokemon(data) {
-        // Loop through each of the pokémons and show the requested name or ID number.
-        for (let i = 0; i < tmpl.length; i++) {
-            let list = data[i];
-            let name = document.getElementById('tpl-pokemon').content.cloneNode(true);
-            let input = document.querySelectorAll("#inputName").value;
 
-            if (input == data[i]) {
-                name.querySelector('.inputIDname').innerText = list.name;
-                target.appendChild(Name); // and display it in the tag whose id is "target"
-                target.innerHTML = " ";
+        function showPokemon(data) {
+
+            // Loop through each of the pokémons and show the requested name or ID number.
+            for (let i = 0; i < data.length; i++) {
+                let list = data[i];
+                let result = document.getElementById("target").content.cloneNode(true);
+                let input = document.querySelectorAll("#input").value;
+
+                //At least 4 "moves" / some have only 1 move!
+                let moves = [];
+                let x = "";
+                let data = "";
+                if (data.moves.length < 4) {
+                    x = 1;
+                } else {
+                    x = 4;
+
+                if (input == data[i]) {
+                    result.querySelector('.id').innerText = list.id;
+                    result.querySelector('.name').innerText = list.name;
+                    result.querySelector('.moves').innerText = list.moves;
+                    result.querySelector('.image').innerText = list.sprites;
+                    target.appendChild(result);
+                    target.innerHTML = " ";
+                }
+                console.log("result: " + result)
+                console.log("input: " + input)
             }
-            console.log(name, input)
-            console.log("test is something is appearing?")
         }
-    }
-    //let moves = Math.floor(Math.random());
-})
+    })
 ();
+// for the moves, use  = Math.floor(Math.random());
+// add extra alert message: you cannot use characters = search for input validations
+// error when thhe field is empty
+// afterwards make the field empty again
+// typo corrections
