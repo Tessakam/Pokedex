@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="description">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Pokedex</title>
+</head>
+<body>
+<h1>Hello Pokedex!</h1>
+<div>
+    <img src="pokedex.jpg"
+</div>
+
+<div class="field name">
+    <p>Search your Pokémon with <strong>the name</strong></p>
+    <input type="text" name="name" id="IDname"/>
+</div>
+
+<div class="field number">
+    <p>Search your Pokémon with the <strong>ID-number</strong></p>
+    <input type="text" name="number" id="IDnumber"/>
+</div>
+
+<div class="actions">
+    <button type="button" class="game" id="searchName">Search name</button>
+    <button type="button" class="game" id="searchID">Search ID-number</button>
+</div>
+
+<template id="tpl-pokémon">
+    <li class="hero">
+        <h4 class="title">
+            <strong class="name"></strong>
+            <em class="alter-ego"></em>
+        </h4>
+        <p class="moves"></p>
+    </li>
+</template>
+
+<!-- <div class="img">
+    <img id=img
+         src="https://media.giphy.com/media/3osxYfP8SJVa9XpVyo/giphy.gif"
+         alt="gif" width="200px">
+</div>
+-->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
