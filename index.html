@@ -9,38 +9,33 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <!--<link rel="stylesheet" type="text/css" href="index.css">-->
     <title>Pokedex</title>
 </head>
 <body>
 <h1>Hello Pokedex!</h1>
 <div>
-    <img src="pokedex.jpg"
+    <img src="pokedex.jpg">
 </div>
 
-<div class="field name">
-    <p>Search your Pokémon with <strong>the name</strong></p>
-    <input type="text" name="name" id="IDname"/>
-</div>
-
-<div class="field number">
-    <p>Search your Pokémon with the <strong>ID-number</strong></p>
-    <input type="text" name="number" id="IDnumber"/>
+<div class="field">
+    <p>Search your Pokémon with the <strong> name or ID-number</strong></p>
+    <input type="text" name="input" id="input"/>
 </div>
 
 <div class="actions">
-    <button type="button" class="game" id="searchName">Search name</button>
-    <button type="button" class="game" id="searchID">Search ID-number</button>
+    <button type="button" class="game" id="search">Search!</button>
 </div>
 
-<template id="tpl-pokémon">
-    <li class="hero">
+<template id="tpl-pokemon">
+    <li class="result">
         <h4 class="title">
             <strong class="name"></strong>
-            <em class="alter-ego"></em>
+            <em class="IDnumber"></em>
         </h4>
         <p class="moves"></p>
     </li>
+    <ol id="target"></ol>
 </template>
 
 <!-- <div class="img">

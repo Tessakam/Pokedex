@@ -1,25 +1,31 @@
 (() => {
-    //link with localhost
-    fetch('https://pokeapi.co/')
-        .then(response => response.json())
-        .then(tmpl => showPokémon(tmpl))
 
-    function showPokémon(tmpl) {
-        // Loop through each of the pokémons and add them to the Xmen list.
+
+    document.getElementById("search").addEventListener("click", () => {
+
+        // Make a Pokédex using API https://pokeapi.co/
+        fetch('https://pokeapi.co/api/v2/pokemon/') // example ditto
+            .then(response => response.json())
+            .then(data => showPokemon(data))
+        console.log(data)
+    })
+
+    function showPokemon(data) {
+        // Loop through each of the pokémons and show the requested name or ID number.
         for (let i = 0; i < tmpl.length; i++) {
-            let list = tmpl[i];
-            let name = document.getElementById('tpl-pokémon').content.cloneNode(true);
-            let input = document.querySelectorAll("#hero-id").value;
+            let list = data[i];
+            let name = document.getElementById('tpl-pokemon').content.cloneNode(true);
+            let input = document.querySelectorAll("#inputName").value;
 
-            if (input == tmpl[i]) {
-                name.querySelector('.IDnumber').innerText = list.id;
-                name.querySelector('.IDname').innerText = list.name;
-                name.querySelector('.alter-ego').innerText = list.sprites;
-                name.querySelector('.powers').innerText = list.abilities;
-                target.appendChild(name); // and display it in the tag whose id is "target"
+            if (input == data[i]) {
+                name.querySelector('.inputIDname').innerText = list.name;
+                target.appendChild(Name); // and display it in the tag whose id is "target"
                 target.innerHTML = " ";
             }
+            console.log(name, input)
+            console.log("test is something is appearing?")
         }
     }
+    //let moves = Math.floor(Math.random());
 })
 ();
