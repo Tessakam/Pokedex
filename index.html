@@ -11,9 +11,9 @@
     <title>Pokédex</title>
 </head>
 <body>
-<h1>Hello Pokédex!</h1>
-<div>
-    <img src="pokedex.jpg">
+<p>
+<h1>Hello Pokédex!</h1><div>
+   <!--img src="pokedex.jpg"> -->
 </div>
 
 <div class="field">
@@ -26,22 +26,14 @@
     <br>
     <button type="button" class="game" id="search">Search!</button>
     <button type="button" class="reset" id="reset">Reset</button>
-
 </div>
 
-<section>
-<template id="tmp-pokemon">
-    <li class="Pokemon">
-        <h4 class="title">
-            <strong class="name"></strong> <span>Name: </span>
-            <strong class="id"></strong> <span>ID-number: </span>
-            <strong class="moves"></strong> <span>Moves: </span>
-        </h4>
-        <img class="img">
-    </li>
-<ol id="target"></ol>
-</template>
-</section>
+<br>
+<div id="tmp-pokemon"></div>
+<div id="id"></div>
+<div id="name"></div>
+<div id="moves"></div>
+<div id="img"></div>
 
 <script src="./script.js"></script>
 
