@@ -1,5 +1,8 @@
 # AJAX Pokédex
 
+## Publish
+https://tessakam.github.io/pokedex/
+
 ## Practical Information
 
 * Repository: `ajax-pokedex`
