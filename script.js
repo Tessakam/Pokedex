@@ -1,7 +1,7 @@
 // Functionalities:
 // [x] The ID-number and name
-// [ ] An image (sprite)
-// [ ] At least 4 "moves - tip for the moves, use = Math.floor(Math.random());
+// [x] An image (sprite)
+// [x] At least 4 "moves - tip for the moves, use = Math.floor(Math.random());
 // [ ] add extra alert message: you cannot use characters = search for input validations (alert("Please check your input, is this a number or ID?")
 // [ ] error when the field is empty
 // [ ] afterwards make the field empty again
@@ -35,7 +35,7 @@
             let moves = [];
             for (let i = 0; i < 4; i++) {
                 moves.push(data.moves[i].move.name)
-                console.log(moves)
+                //console.log(moves)
 
                 let unique = [...new Set(moves)];
                 document.getElementById("moves").innerHTML = "Moves: " + unique.join(', ');
