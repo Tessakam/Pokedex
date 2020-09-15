@@ -2,6 +2,11 @@
 
 ## Publish
 https://tessakam.github.io/pokedex/
+* Status 15/9: basic functionalities:
+[x] The ID-number and name
+[x] An image (sprite)
+[x] At least 4 "moves 
+* Like to add: random in moves
 
 ## Practical Information
 
