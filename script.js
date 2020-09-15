@@ -1,5 +1,5 @@
 // Functionalities:
-// [ ] The ID-number and name
+// [x] The ID-number and name
 // [ ] An image (sprite)
 // [ ] At least 4 "moves - tip for the moves, use = Math.floor(Math.random());
 // [ ] add extra alert message: you cannot use characters = search for input validations (alert("Please check your input, is this a number or ID?")
@@ -19,32 +19,19 @@
                 return response.json()
             }).then(data => {
 
-            document.getElementById("id").innerHTML = data.id
-            document.getElementById("name").innerHTML = data.name
+            document.getElementById("id").innerHTML = "ID-number: " + data.id
+            document.getElementById("name").innerHTML = "Name: " + data.name
             document.getElementById("img").setAttribute = ("src", data.sprites.front_default)
+            document.getElementById("moves").innerHTML = "Moves: " + data.moves
 
-        })
-    })
-})
-    ();
-
-            /*function showPokemon() {
-
-
-                document.getElementsByClassName("moves").innerHTML = data.moves
-                let moves = []
-                let random = []
-                let x = "";
-
+            let i = 0;
+            for (i; i < 4; i++) {
                 if (data.moves.length < 4) {
-                    x = 1;
+                    i = 1;
                 } else {
-                    x = 4;
+                    i = 4;
                 }
-                random.push(Math.floor(Math.random() * moves.length))
-
-                let result = document.getElementById("tmp-pokemon").content.cloneNode(true);
-                return result;
+                moves = data.moves[i].data.moves.name
             }
         })
     })
@@ -52,7 +39,7 @@
 ();
 
 /*if (input == data) {
-    showPokemon()
+showPokemon()
 } else {
-    alert("Please check your input, is this a number or ID?")
+alert("Please check your input, is this a number or ID?")
 }*/
