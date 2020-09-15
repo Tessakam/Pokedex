@@ -12,7 +12,14 @@
     document.getElementById("search").addEventListener("click", () => {
 
         let input = document.getElementById("input").value;
-        console.log("input:" + input)
+
+        function validateInput() {
+            document.getElementById("input").value = "";
+            if (input == "" || input == null) {
+                alert("Please check your input, is this a number or ID?");
+                return false;
+            }
+        }
 
         fetch('https://pokeapi.co/api/v2/pokemon/' + input)
             .then(response => {
@@ -21,26 +28,20 @@
 
             document.getElementById("id").innerHTML = "ID-number: " + data.id
             document.getElementById("name").innerHTML = "Name: " + data.name
-            document.getElementById("img").setAttribute = ("src" + data.sprites.front_default)
+
+            let sprites = data.sprites.front_default
+            document.querySelector("img").src = sprites;
 
             let moves = [];
-            let i = 0;
-            for (i; i < 4; i++) {
-                if (data.moves.length < 4) {
-                    i = 1;
-                } else {
-                    i = 4;
-                }
-                moves = data.moves[i].move.name;
-                document.getElementById("moves").innerHTML = "Moves: " + moves
+            for (let i = 0; i < 4; i++) {
+                moves.push(data.moves[i].move.name)
+                console.log(moves)
+
+                let unique = [...new Set(moves)];
+                document.getElementById("moves").innerHTML = "Moves: " + unique.join(', ');
             }
         })
     })
 })
 ();
 
-/*if (input == data) {
-showPokemon()
-} else {
-alert("Please check your input, is this a number or ID?")
-}*/
