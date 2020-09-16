@@ -5,20 +5,19 @@ html {
     font-family: Impact, Charcoal, sans-serif;
     color: black;
     box-sizing: border-box;
-    border-top: 20px;
 }
 
 body {
     width: 500px;
     margin: 0 auto;
-    background-color: lavender;
-
+    background-image:url("https://wallup.net/wp-content/uploads/2017/03/29/483774-Pikachu-Pok%C3%A9mon.jpg");
+    margin-top: 50px;
     padding: 20px 20px 20px 20px;
     border: 1px dashed grey;
     font-family: Impact, Charcoal, sans-serif;
     position: sticky;
-}
 
+}
 
 h1 {
     text-align: center;
