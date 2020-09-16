@@ -10,8 +10,9 @@ html {
 body {
     width: 500px;
     margin: 0 auto;
-    background-image:url("https://wallup.net/wp-content/uploads/2017/03/29/483774-Pikachu-Pok%C3%A9mon.jpg");
+    background-color: #F9E620;
     margin-top: 50px;
+    margin-bottom: 50px;
     padding: 20px 20px 20px 20px;
     border: 1px dashed grey;
     font-family: Impact, Charcoal, sans-serif;
